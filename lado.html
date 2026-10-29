@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For My Lado ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#ffd6e3; --pink:#ffb3cc; --rose:#ff7aa2; --red:#e8476f; --cream:#fff6ec;
+  --lav:#d9c8ff; --lav2:#b9a3f0; --ink:#6b2a45;
+  --script:'Dancing Script','Segoe Script','Brush Script MT',cursive;
+  --hand:'Caveat','Segoe Script',cursive;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Quicksand',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+section{position:relative;min-height:100vh;min-height:100svh;padding:72px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;text-align:center}
+button{font-family:inherit;cursor:pointer;border:none}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.float-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.fh{position:absolute;bottom:-40px;opacity:0;animation:rise linear infinite;will-change:transform}
+@keyframes rise{0%{transform:translateY(0) translateX(0) rotate(0);opacity:0}10%{opacity:.85}90%{opacity:.7}100%{transform:translateY(-115vh) translateX(var(--dx,20px)) rotate(var(--rot,20deg));opacity:0}}
+.spark{position:absolute;width:6px;height:6px;background:#fff;border-radius:50%;box-shadow:0 0 8px 3px rgba(255,255,255,.9);animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1.3)}}
+.content{position:relative;z-index:2;width:100%;max-width:640px}
+.btn{background:linear-gradient(135deg,var(--rose),var(--red));color:#fff;font-weight:600;font-size:1.02rem;padding:15px 30px;border-radius:50px;box-shadow:0 10px 25px rgba(232,71,111,.35);transition:transform .25s,box-shadow .25s;letter-spacing:.3px}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 30px rgba(232,71,111,.45)}
+.btn:active{transform:scale(.97)}
+.btn.soft{background:rgba(255,255,255,.75);color:var(--red);box-shadow:0 6px 18px rgba(232,71,111,.18);font-size:.95rem;padding:13px 24px}
+
+/* ---------- S1 ---------- */
+#s1{background:radial-gradient(circle at 20% 15%,#fff 0,transparent 40%),linear-gradient(160deg,#ffe3ec 0%,#ffc2d6 50%,#ff9fbe 100%)}
+.hero-heart{width:110px;height:100px;position:relative;margin:0 auto 26px;animation:beat 1.6s ease-in-out infinite;filter:drop-shadow(0 0 18px rgba(255,255,255,.9)) drop-shadow(0 8px 14px rgba(232,71,111,.4))}
+.hero-heart svg{width:100%;height:100%}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+#s1 h1{font-family:var(--script);font-weight:700;font-size:clamp(1.9rem,7.2vw,3.2rem);line-height:1.3;color:#b32653;text-shadow:0 2px 14px rgba(255,255,255,.8);animation:glowtxt 4s ease-in-out infinite}
+@keyframes glowtxt{0%,100%{text-shadow:0 2px 14px rgba(255,255,255,.7)}50%{text-shadow:0 2px 26px rgba(255,255,255,1),0 0 30px rgba(255,255,255,.8)}}
+#s1 p.sub{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,3.8vw,1.25rem);margin:22px auto 34px;max-width:480px;line-height:1.7;color:#8f2c4f}
+.pop{opacity:0;animation:popin 1s cubic-bezier(.2,.9,.3,1.3) forwards}
+@keyframes popin{from{opacity:0;transform:translateY(25px) scale(.92)}to{opacity:1;transform:none}}
+
+/* ---------- S2 ---------- */
+#s2{background:linear-gradient(180deg,#fff0f4 0%,#ffe9d9 100%);justify-content:flex-start;padding-top:80px;padding-bottom:90px}
+#s2 h2,#s3 h2,#s4 h2,#s5 h2{font-family:var(--script);font-size:clamp(1.9rem,7vw,2.8rem);color:var(--red);margin-bottom:8px}
+.tap-hint{font-size:.95rem;color:#a45a74;margin-bottom:24px}
+.env-wrap{position:relative;z-index:2;perspective:1200px;margin-bottom:10px}
+.envelope{position:relative;width:min(300px,78vw);height:min(200px,52vw);margin:0 auto;cursor:pointer;background:linear-gradient(#ffc6d8,#ffa9c6);border-radius:6px 6px 14px 14px;box-shadow:0 18px 35px rgba(180,60,100,.28);transition:transform .4s;animation:bob 3.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.envelope.open{animation:none}
+.envelope::before,.envelope::after{content:"";position:absolute;bottom:0;width:50%;height:100%;z-index:3}
+.envelope::before{left:0;background:linear-gradient(115deg,#ffb5cd 50%,transparent 50.5%);border-radius:0 0 0 14px}
+.envelope::after{right:0;background:linear-gradient(245deg,#ffb5cd 50%,transparent 50.5%);border-radius:0 0 14px 0}
+.flap{position:absolute;top:0;left:0;width:100%;height:55%;background:linear-gradient(#ff9fbe,#ff8db3);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease,z-index 0s .4s;z-index:5;border-radius:6px 6px 0 0}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.seal{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:2rem;z-index:6;transition:opacity .4s;filter:drop-shadow(0 3px 5px rgba(0,0,0,.2))}
+.envelope.open .seal{opacity:0}
+.mini-card{position:absolute;left:8%;right:8%;top:10%;height:80%;background:var(--cream);border-radius:4px;z-index:2}
+.tiny{position:absolute;font-size:1rem;animation:twinkle 2.5s ease-in-out infinite;pointer-events:none}
+.paper-wrap{position:relative;z-index:2;width:100%;max-width:560px;perspective:1400px;margin-top:6px}
+.paper{background:
+  repeating-linear-gradient(transparent 0 33px,rgba(232,150,175,.22) 33px 34px),
+  radial-gradient(circle at 20% 10%,#fffdf7,#fbefdc);
+  border-radius:6px;padding:34px 26px 30px 36px;text-align:left;box-shadow:0 20px 45px rgba(120,60,60,.25),inset 0 0 40px rgba(210,170,130,.25);
+  font-family:var(--hand);font-size:clamp(1.28rem,4.6vw,1.55rem);line-height:34px;color:#5a2b3c;
+  transform-origin:top center;transform:rotateX(-90deg) scaleY(.05);opacity:0;max-height:0;overflow:hidden;border-left:3px double rgba(232,100,140,.35);
+  transition:transform 1.1s cubic-bezier(.2,.8,.2,1),opacity .6s,max-height 1.4s ease,padding .6s}
+.paper.show{transform:none;opacity:1;max-height:3400px}
+.paper p{margin-bottom:34px}
+.paper .to{font-family:var(--script);font-size:1.7em;color:var(--red);line-height:40px}
+.sign{margin-top:6px;margin-bottom:0!important}
+.sign .big{font-family:var(--script);font-size:1.6em;color:var(--red);display:inline-block}
+.beat-s{display:inline-block;animation:beat 1.4s infinite;margin-left:6px}
+.closer{margin-top:28px;z-index:2;position:relative;display:none}
+.closer.show{display:block;animation:popin .8s forwards}
+.keep-msg{margin:22px auto 0;max-width:520px;background:rgba(255,255,255,.85);border:2px dashed var(--pink);border-radius:20px;padding:22px 22px;font-family:var(--hand);font-size:1.4rem;line-height:1.55;color:#7a2e4c;box-shadow:0 10px 25px rgba(232,71,111,.15);opacity:0;transform:scale(.85);transition:all .7s cubic-bezier(.2,.9,.3,1.3);max-height:0;overflow:hidden;padding-top:0;padding-bottom:0;border-width:0}
+.keep-msg.show{opacity:1;transform:none;max-height:400px;padding:22px;border-width:2px}
+
+/* ---------- S3 ---------- */
+#s3{background:
+  radial-gradient(circle,rgba(255,255,255,.55) 2px,transparent 2.5px) 0 0/26px 26px,
+  linear-gradient(160deg,#ffdbe7,#ffc1d4);}
+#s3 h2{color:#c2335f;font-size:clamp(1.7rem,6.4vw,2.6rem);line-height:1.25}
+.intro3{font-family:var(--hand);font-size:1.35rem;line-height:1.5;max-width:520px;margin:10px auto 36px;color:#8a3a58}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 18px;max-width:560px;margin:0 auto;padding:0 4px}
+.pol{perspective:1000px;cursor:pointer;position:relative;aspect-ratio:3/4.1;transform:rotate(var(--r));transition:transform .3s}
+.pol:hover{transform:rotate(0) scale(1.03)}
+.pol-in{position:absolute;inset:0;transition:transform .8s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
+.pol.flip .pol-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border-radius:6px;padding:10px 10px 0;box-shadow:0 12px 24px rgba(160,50,90,.3);display:flex;flex-direction:column}
+.face.back{transform:rotateY(180deg);background:#fffaf2;padding:14px 12px;justify-content:center;align-items:center;font-family:var(--hand);font-size:clamp(.98rem,3.6vw,1.2rem);line-height:1.35;color:#6a2c45}
+.photo{flex:1;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:clamp(2.6rem,12vw,4rem)}
+.cap{font-family:var(--hand);font-size:clamp(1.15rem,4.6vw,1.5rem);padding:8px 0 10px;color:#a32c58;font-weight:700}
+.rib{position:absolute;top:-12px;left:50%;transform:translateX(-50%);z-index:3;font-size:1.6rem;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}
+.tape{position:absolute;top:-10px;left:50%;width:70px;height:22px;transform:translateX(-50%) rotate(-4deg);background:rgba(255,200,215,.8);z-index:3;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.tapfl{font-size:.75rem;color:#c06a88;position:absolute;bottom:6px;right:10px;font-family:var(--sans)}
+.deco{position:absolute;font-size:1.6rem;opacity:.7;animation:bob 4s ease-in-out infinite;pointer-events:none}
+
+/* ---------- S4 ---------- */
+#s4{background:linear-gradient(170deg,#e9d6ff 0%,#f6c9e6 50%,#ffc2d6 100%);min-height:110vh}
+#s4 h2{font-size:clamp(1.5rem,6vw,2.3rem);color:#9b3f86;line-height:1.35;max-width:560px;margin-left:auto;margin-right:auto}
+.intro4{font-size:1.02rem;line-height:1.7;max-width:480px;margin:10px auto 14px;color:#6e3a78}
+.world{position:relative;width:min(380px,92vw);height:min(420px,100vw);margin:0 auto}
+.core{position:absolute;left:50%;top:50%;width:90px;height:82px;transform:translate(-50%,-50%);animation:beat 2s infinite;filter:drop-shadow(0 0 22px #fff) drop-shadow(0 0 40px rgba(255,100,160,.8));z-index:1}
+.core svg{width:100%;height:100%}
+.halo{position:absolute;left:50%;top:50%;width:200px;height:200px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75),transparent 70%);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(.9);opacity:.7}50%{transform:translate(-50%,-50%) scale(1.25);opacity:1}}
+.orb{position:absolute;width:62px;height:58px;background:none;z-index:3;animation:drift 5s ease-in-out infinite;animation-delay:var(--d);filter:drop-shadow(0 6px 10px rgba(180,50,120,.4));transition:transform .3s}
+.orb svg{width:100%;height:100%}
+.orb:hover{transform:scale(1.2)}
+.orb.seen svg path{fill:#ffd3e4}
+@keyframes drift{0%,100%{translate:0 0}33%{translate:8px -12px}66%{translate:-8px 8px}}
+.orb .n{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1rem;padding-bottom:6px}
+.msgbox{position:relative;z-index:4;margin:18px auto 0;max-width:500px;min-height:96px;background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border-radius:22px;padding:22px 24px;box-shadow:0 14px 34px rgba(150,60,150,.25);font-family:var(--hand);font-size:1.45rem;line-height:1.45;color:#7a2e6a;display:flex;align-items:center;justify-content:center}
+.msgbox.swap{animation:swapin .7s cubic-bezier(.2,.9,.3,1.3)}
+@keyframes swapin{from{opacity:0;transform:translateY(20px) scale(.9)}to{opacity:1;transform:none}}
+.s4btn{margin-top:20px;position:relative;z-index:4}
+
+/* ---------- S5 ---------- */
+#s5{background:linear-gradient(180deg,#ffe0ea 0%,#fff2e4 100%)}
+.big-heart{width:150px;height:136px;margin:0 auto 22px;position:relative;animation:beat 2.2s infinite;filter:drop-shadow(0 0 26px rgba(255,120,160,.8));transition:transform 1.4s cubic-bezier(.2,.9,.3,1.2)}
+.big-heart.grow{transform:scale(1.45);animation:beat 1.2s infinite}
+.big-heart svg{width:100%;height:100%}
+#s5 .msg5{font-family:var(--serif);line-height:1.85;font-size:clamp(1rem,3.9vw,1.15rem);max-width:520px;margin:14px auto 26px;color:#7a3050}
+#s5 .msg5 p{margin-bottom:14px}
+.final{margin-top:26px;min-height:30px}
+.final .l{opacity:0;transform:translateY(14px);filter:blur(6px);transition:all 1.3s ease;margin:0 auto 16px;max-width:520px}
+.final .l.on{opacity:1;transform:none;filter:none}
+.l1{font-family:var(--script);font-size:clamp(1.7rem,6.4vw,2.3rem);color:var(--red);font-weight:700}
+.l2{font-family:var(--hand);font-size:1.45rem;line-height:1.5;color:#7a2e4c}
+.l3{font-family:var(--script);font-size:1.5rem;color:#b32653}
+.burst{position:absolute;pointer-events:none;z-index:5;font-size:1.4rem;animation:burst 1.8s ease-out forwards}
+@keyframes burst{0%{transform:translate(0,0) scale(.3);opacity:1}100%{transform:translate(var(--bx),var(--by)) scale(1.4) rotate(var(--br));opacity:0}}
+
+/* music */
+.music{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:50;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--red);font-size:1.4rem;box-shadow:0 6px 18px rgba(232,71,111,.35)}
+.music.on{animation:beat 1.2s infinite}
+.music-tip{position:fixed;right:70px;bottom:calc(24px + env(safe-area-inset-bottom));z-index:50;background:rgba(255,255,255,.92);color:#a32c58;padding:6px 12px;border-radius:14px;font-size:.8rem;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:opacity .5s}
+@media (min-width:700px){.grid{gap:34px 26px}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<button class="music" id="music" aria-label="Play background music">🎵</button>
+<div class="music-tip" id="musicTip">Music 🎶 (tap to play)</div>
+
+<!-- SVG heart template -->
+<svg width="0" height="0" style="position:absolute"><defs>
+  <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9ab8"/><stop offset="1" stop-color="#e8476f"/></linearGradient>
+</defs></svg>
+
+<!-- ================= SECTION 1 ================= -->
+<section id="s1">
+  <div class="float-layer" id="fl1"></div>
+  <div class="content">
+    <div class="hero-heart pop" style="animation-delay:.2s">
+      <svg viewBox="0 0 32 29"><path fill="url(#hg)" d="M23.6 0c-3.4 0-6.3 2.3-7.6 5.5C14.7 2.3 11.800 0 8.400 0 3.800 0 0 3.800 0 8.400c0 9.500 16 20.600 16 20.600s16-11.100 16-20.600C32 3.800 28.200 0 23.600 0z"/><ellipse cx="9" cy="8" rx="3" ry="2" fill="#fff" opacity=".55" transform="rotate(-30 9 8)"/></svg>
+    </div>
+    <h1 class="pop" style="animation-delay:.6s">Pata ni aap q ni bolti, but Mera farz hai mein pehla manau apni lado ko ❤️</h1>
+    <p class="sub pop" style="animation-delay:1.1s">Because your smile will always mean more to me than my ego. 💗</p>
+    <button class="btn pop" style="animation-delay:1.6s" id="openBtn">Open Something Special 💌</button>
+  </div>
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+<section id="s2">
+  <div class="float-layer" id="fl2"></div>
+  <div class="content reveal" style="max-width:600px">
+    <h2>A Letter Just For You 💌</h2>
+    <p class="tap-hint" id="hint2">Envelope par tap karein, meri lado 🥹</p>
+    <div class="env-wrap">
+      <div class="envelope" id="env" role="button" tabindex="0" aria-label="Open the letter">
+        <div class="mini-card"></div>
+        <div class="flap"></div>
+        <div class="seal">💗</div>
+      </div>
+      <span class="tiny" style="left:6%;top:6%">💗</span>
+      <span class="tiny" style="right:6%;top:14%;animation-delay:.6s">🎀</span>
+      <span class="tiny" style="left:12%;bottom:-6%;animation-delay:1.1s">💕</span>
+      <span class="tiny" style="right:10%;bottom:0;animation-delay:1.7s">✨</span>
+    </div>
+    <div class="paper-wrap">
+      <div class="paper" id="paper">
+        <p class="to">My Dearest Lado,</p>
+        <p>Pata hai, aaj mera dil kiya ke main apni saari baatein ek jagah likh doon, bas aapke liye. Toh yeh letter hazir hai, meri jaan. 🥹</p>
+        <p>Sach bataun? Aap mere liye bohat special aur bohat precious hain. Aapki smile dekh kar mera poora din ban jata hai, aur aapki cute si baatein sun kar to mujhe khud pata nahi chalta main kab se muskura raha hoon. Aapki chhoti chhoti aadatein, jaise aapka baat karte hue achanak excited ho jana, woh sab mujhe bohat pyari lagti hain.</p>
+        <p>Aap se baat karna na, ordinary se moments ko bhi special bana deta hai. Chahe woh bas ek chhota sa message ho ya lambi si baat, mujhe aapko sunna hamesha achha lagta hai. Aapke saath waqt guzarna meri favourite cheezon mein se ek hai.</p>
+        <p>Mujhe aapko cute cute naam se bulana bohat pasand hai. Lado, Meri Jaan, Princess, My Love, har naam mein bas aapke liye pyaar hi pyaar hai, aur main yeh naam kabhi change nahi karunga. 😚</p>
+        <p>Aapki khushi, aapka comfort aur aapki feelings mere liye sab se zyada matter karti hain. Main chahta hoon aap hamesha khush rahein, aur aapko jab bhi kisi cheez ki zaroorat ho, main aapke saath hi hoon.</p>
+        <p>Main aapke saath bohat saari beautiful memories banana chahta hoon, aise memories jinhein yaad kar ke hum dono ke chehre par smile aa jaye.</p>
+        <p>Main aapse waada karta hoon ke main hamesha aapki izzat karunga, aapka khayal rakhunga, aapki choti si choti baat ki bhi qadar karunga, aur aapko roz yeh feel karwaunga ke aap kitni loved hain. Main wohi insaan banna chahta hoon jis par aap aankhein band kar ke trust kar sakein, aur jiske saath aap bilkul apne aap jaisi reh sakein.</p>
+        <p>Aap meri life ka woh pyara sa hissa hain jiski wajah se sab kuch zyada khoobsurat lagta hai. Aur meri dua hai ke yeh pyaar, yeh bond, hamesha aise hi mazboot aur meetha rahe.</p>
+        <p>I love you, meri lado. Aaj bhi, kal bhi, aur hamesha. ❤️</p>
+        <p class="sign">Aapka Apna,<br><span class="big">Your Forever Person ❤️💌</span><span class="beat-s">💗</span></p>
+      </div>
+    </div>
+    <div class="closer" id="closer">
+      <button class="btn soft" id="keepBtn">Keep This Little Letter Close to Your Heart 💗</button>
+      <div class="keep-msg" id="keepMsg">Meri lado, aap jaisi pyari insaan mujhe mili, yeh meri sab se achhi luck hai. Aap hamesha mere dil ke bohat qareeb rahengi. Mujhe aap par bohat pyaar aata hai aur aap ke liye bohat saari care hai mere paas. 🥹❤️</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 3 ================= -->
+<section id="s3">
+  <span class="deco" style="left:5%;top:6%">🎀</span>
+  <span class="deco" style="right:6%;top:10%;animation-delay:1s">💗</span>
+  <span class="deco" style="left:8%;bottom:6%;animation-delay:2s">🌸</span>
+  <span class="deco" style="right:8%;bottom:8%;animation-delay:1.5s">💕</span>
+  <div class="content reveal" style="max-width:600px">
+    <h2>Chhoti Chhoti Baatein, Bara Sara Pyaar 💗</h2>
+    <p class="intro3">Pata hai, aapki bohat si chhoti chhoti baatein hain jo mujhe bohat pyari lagti hain or mere liya bohat qeemti hain. 🥹❤️</p>
+    <div class="grid">
+      <div class="pol" style="--r:-3deg" tabindex="0" role="button">
+        <div class="rib">🎀</div>
+        <div class="pol-in">
+          <div class="face"><div class="photo" style="background:linear-gradient(135deg,#ffe3ec,#ffc4d8)">😊</div><div class="cap">Aapki Smile 😊</div><span class="tapfl">tap ♡</span></div>
+          <div class="face back">Aap jab smile karti hain na, kasam se bohat pyari lagti hain. Bas dil karta hai aap aise hi hamesha hansti muskurati raha karein. ❤️</div>
+        </div>
+      </div>
+      <div class="pol" style="--r:2.5deg" tabindex="0" role="button">
+        <div class="tape"></div>
+        <div class="pol-in">
+          <div class="face"><div class="photo" style="background:linear-gradient(135deg,#f0e2ff,#ffd0e4)">🎀</div><div class="cap">Meri Cutie 🎀</div><span class="tapfl">tap ♡</span></div>
+          <div class="face back">Aapki cute si baatein aur aapka pyara sa andaaz, Aapko dekh kar hamesha bas smile hi aati rehti hai. You're too cute, meri lado. 🥹💗</div>
+        </div>
+      </div>
+      <div class="pol" style="--r:3.5deg" tabindex="0" role="button">
+        <div class="tape"></div>
+        <div class="pol-in">
+          <div class="face"><div class="photo" style="background:linear-gradient(135deg,#fff0d9,#ffc9d6)">💌</div><div class="cap">My Favourite Person 💌</div><span class="tapfl">tap ♡</span></div>
+          <div class="face back">Aap se baat karna, aapki baatein sunna aur aapke saath apne little moments share karna mujhe bohat pasand hai. Aap meri favourite person hain, simple si baat hai. ❤️</div>
+        </div>
+      </div>
+      <div class="pol" style="--r:-2deg" tabindex="0" role="button">
+        <div class="rib">🎀</div>
+        <div class="pol-in">
+          <div class="face"><div class="photo" style="background:linear-gradient(135deg,#ffe9b8,#ffc2d4)">👑</div><div class="cap">Meri Princess 👑</div><span class="tapfl">tap ♡</span></div>
+          <div class="face back">Aap meri princess hain aur aapko special feel karwana meri favourite cheezon mein se ek hai. Bas aapko khush dekh kar dil khush ho jata hai. 😚❤️</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 4 ================= -->
+<section id="s4">
+  <div class="float-layer" id="fl4"></div>
+  <div class="content reveal" style="max-width:600px">
+    <h2>Kiya hua Meri princess ko q nahi Bolti mujh se 🥹❤️</h2>
+    <p class="intro4">Meri lado, aapke liye kuch chhote chhote messages chhupaye hain. Ek ek heart par click karein aur dekhein usmein kya hai. Hehe. 💗</p>
+    <div class="world" id="world">
+      <div class="halo"></div>
+      <div class="core"><svg viewBox="0 0 32 29"><path fill="url(#hg)" d="M23.6 0c-3.4 0-6.3 2.3-7.6 5.5C14.7 2.3 11.800 0 8.400 0 3.800 0 0 3.800 0 8.400c0 9.500 16 20.600 16 20.600s16-11.100 16-20.600C32 3.800 28.200 0 23.600 0z"/></svg></div>
+    </div>
+    <div class="msgbox" id="msgbox">Kisi bhi heart par tap karein ✨</div>
+    <button class="btn s4btn" id="surpriseBtn">Show Me Another Little Surprise 💌</button>
+  </div>
+</section>
+
+<!-- ================= SECTION 5 ================= -->
+<section id="s5">
+  <div class="float-layer" id="fl5"></div>
+  <div class="content reveal" style="max-width:600px;position:relative" id="c5">
+    <div class="big-heart" id="bigHeart"><svg viewBox="0 0 32 29"><path fill="url(#hg)" d="M23.6 0c-3.4 0-6.3 2.3-7.6 5.5C14.7 2.3 11.800 0 8.400 0 3.800 0 0 3.800 0 8.400c0 9.500 16 20.600 16 20.600s16-11.100 16-20.600C32 3.800 28.200 0 23.600 0z"/><ellipse cx="9" cy="8" rx="3" ry="2" fill="#fff" opacity=".5" transform="rotate(-30 9 8)"/></svg></div>
+    <h2>Ek Last Si Baat, Meri Lado ❤️</h2>
+    <div class="msg5">
+      <p>Pata hai, aap meri life mein bohat special hain. Aapki smile, aapki cute si baatein aur aapka pyara sa andaaz mere liye bohat precious hai.</p>
+      <p>Main chahta hoon ke aapko hamesha pyaar, care, respect aur bohat saari khushiyan milen.🥹❤️</p>
+      <p>Aap meri favourite person hain, meri princess hain aur meri bohat pyari si lado hain.</p>
+      <p>I love you more than these little words can ever explain. ❤️💗</p>
+    </div>
+    <button class="btn" id="finalBtn">Tap for Your Final Surprise 💌</button>
+    <div class="final" id="final">
+      <p class="l l1">Achha ab meri lado ek pyari si smile kar de. 🥹❤️</p>
+      <p class="l l2">Bas aise hi hamesha hansti muskurati raha karein, meri jaan. Aapki smile bohat pyari hai. Aap meri life ki bohat special person hain aur main aapko hamesha khush dekhna chahta hoon. ❤️💗</p>
+      <p class="l l3">Made With Lots of Love, Just For You, Meri Lado. 💗</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const HEARTS=['❤️','💗','💕','💖','🩷','💘'];
+
+  /* floating hearts + sparkles */
+  function fill(id,n,sp){
+    const el=document.getElementById(id); if(!el) return;
+    for(let i=0;i<n;i++){
+      const h=document.createElement('span'); h.className='fh';
+      h.textContent=HEARTS[Math.floor(Math.random()*HEARTS.length)];
+      h.style.left=Math.random()*100+'%';
+      h.style.fontSize=(12+Math.random()*22)+'px';
+      h.style.animationDuration=(9+Math.random()*10)+'s';
+      h.style.animationDelay=(-Math.random()*16)+'s';
+      h.style.setProperty('--dx',(Math.random()*80-40)+'px');
+      h.style.setProperty('--rot',(Math.random()*60-30)+'deg');
+      el.appendChild(h);
+    }
+    for(let i=0;i<(sp||0);i++){
+      const s=document.createElement('span'); s.className='spark';
+      s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%';
+      s.style.animationDelay=(Math.random()*3)+'s';
+      s.style.animationDuration=(2+Math.random()*3)+'s';
+      el.appendChild(s);
+    }
+  }
+  fill('fl1',18,26); fill('fl2',8,8); fill('fl4',12,34); fill('fl5',16,22);
+
+  /* scroll reveal */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  $$('.reveal').forEach(el=>io.observe(el));
+
+  /* S1 button */
+  $('#openBtn').addEventListener('click',()=>$('#s2').scrollIntoView({behavior:'smooth'}));
+
+  /* S2 envelope */
+  const env=$('#env'), paper=$('#paper');
+  function openEnv(){
+    if(env.classList.contains('open')) return;
+    env.classList.add('open'); $('#hint2').textContent='Yeh letter sirf aapke liye hai, meri jaan 💗';
+    setTimeout(()=>{paper.classList.add('show');},650);
+    setTimeout(()=>{$('#closer').classList.add('show');},1900);
+    setTimeout(()=>paper.scrollIntoView({behavior:'smooth',block:'start'}),900);
+  }
+  env.addEventListener('click',openEnv);
+  env.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnv()}});
+  $('#keepBtn').addEventListener('click',()=>{$('#keepMsg').classList.add('show')});
+
+  /* S3 cards */
+  $$('.pol').forEach(c=>{
+    const t=()=>c.classList.toggle('flip');
+    c.addEventListener('click',t);
+    c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}});
+  });
+
+  /* S4 hearts */
+  const msgs4=[
+    "Meri jaan, aap meri favourite notification hain. Aapka message aaye toh chehre par smile aa hi jati hai. 🥹❤️",
+    "Aapki ek ek baat Sunna or man'na mujh par farz hai 💗",
+    "Agar cuteness ka koi competition hota na, meri lado first position le jati. Aur main aapka sab se bara fan hota. 🎀❤️",
+    "Aap meri life ka woh beautiful part hain jiske baare mein soch kar bhi smile aa jati hai. 🥹💌",
+    "Mein Apke pas Hun na Meri Jan  🤗❤️"
+  ];
+  const extra=[
+    "Meri lado, aap bohat zyada pyari hain. Ye baat roz batani chahiye mujhe. ❤️",
+    "Aap meri favourite hello aur meri favourite goodnight hain. 💗",
+    "Aapko cute cute names se bulana kabhi band nahi karun ga. 🎀",
+    "Aapki smile meri favourite view hai. 🥹",
+    "loving you in Every universe 😚❤️",
+    "Aap meri jaan bhi hain aur meri sab se pyari cutie bhi. 💌",
+    "If being adorable was a superpower, you would rule the whole universe. 👑",
+    "Meri favourite place? Jahan aap hon aur hum saath hon. ❤️",
+    "Aapke liye pyaar bhi unlimited 🤗💗",
+    "Aap meri little princess hain aur main aapka forever person hun 🎀",
+    "Aapke saath ka har chhota sa lamha mere liye ek beautiful memory hai. 🥹💗",
+    "Aapki hasi sunna meri favourite song sunne se bhi zyada achha lagta hai. 🎶❤️"
+  ];
+  const pos=[[50,6],[88,34],[74,82],[26,82],[12,34]];
+  const world=$('#world'), box=$('#msgbox');
+  function show(t){box.classList.remove('swap');void box.offsetWidth;box.textContent=t;box.classList.add('swap')}
+  msgs4.forEach((m,i)=>{
+    const o=document.createElement('button'); o.className='orb'; o.setAttribute('aria-label','Heart '+(i+1));
+    o.style.left=`calc(${pos[i][0]}% - 31px)`; o.style.top=`calc(${pos[i][1]}% - 29px)`; o.style.setProperty('--d',(i*.7)+'s');
+    o.innerHTML='<svg viewBox="0 0 32 29"><path fill="#ff6f9c" d="M23.6 0c-3.4 0-6.3 2.3-7.6 5.5C14.7 2.3 11.800 0 8.400 0 3.800 0 0 3.800 0 8.400c0 9.500 16 20.600 16 20.600s16-11.100 16-20.600C32 3.800 28.200 0 23.600 0z"/></svg><span class="n">'+(i+1)+'</span>';
+    o.addEventListener('click',()=>{o.classList.add('seen');show(m)});
+    world.appendChild(o);
+  });
+  let last=-1;
+  $('#surpriseBtn').addEventListener('click',()=>{
+    let i; do{i=Math.floor(Math.random()*extra.length)}while(i===last&&extra.length>1);
+    last=i; show(extra[i]);
+  });
+
+  /* S5 final */
+  let done=false;
+  $('#finalBtn').addEventListener('click',()=>{
+    if(done) return; done=true;
+    const bh=$('#bigHeart'); bh.classList.add('grow');
+    const c=$('#c5'), r=bh.getBoundingClientRect(), cr=c.getBoundingClientRect();
+    const cx=r.left-cr.left+r.width/2, cy=r.top-cr.top+r.height/2;
+    for(let i=0;i<26;i++){
+      const b=document.createElement('span'); b.className='burst';
+      b.textContent=HEARTS[i%HEARTS.length];
+      b.style.left=cx+'px'; b.style.top=cy+'px';
+      const a=Math.random()*Math.PI*2, d=90+Math.random()*150;
+      b.style.setProperty('--bx',Math.cos(a)*d+'px'); b.style.setProperty('--by',Math.sin(a)*d-40+'px');
+      b.style.setProperty('--br',(Math.random()*120-60)+'deg');
+      b.style.animationDelay=(Math.random()*.5)+'s';
+      c.appendChild(b); setTimeout(()=>b.remove(),2600);
+    }
+    $('#finalBtn').style.display='none';
+    const ls=$$('#final .l');
+    ls.forEach((l,i)=>setTimeout(()=>{l.classList.add('on');if(i===0)l.scrollIntoView({behavior:'smooth',block:'center'})},1200+i*2600));
+    setTimeout(()=>fill('fl5',14,0),2000);
+  });
+
+  /* music: gentle synthesized melody, starts only on press */
+  let ctx,playing=false,timer,step=0,master;
+  const notes=[261.63,329.63,392.00,523.25,392.00,329.63, 220.00,261.63,329.63,440.00,329.63,261.63, 174.61,220.00,261.63,349.23,261.63,220.00, 196.00,246.94,293.66,392.00,293.66,246.94];
+  function tone(f,t,d){
+    const o=ctx.createOscillator(),g=ctx.createGain();
+    o.type='sine';o.frequency.value=f;
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.18,t+.04);g.gain.exponentialRampToValueAtTime(.001,t+d);
+    o.connect(g);g.connect(master);o.start(t);o.stop(t+d+.05);
+  }
+  function tick(){
+    const f=notes[step%notes.length]; tone(f,ctx.currentTime,1.4);
+    if(step%6===0) tone(f/2,ctx.currentTime,2.4);
+    step++;
+  }
+  const mb=$('#music');
+  mb.addEventListener('click',()=>{
+    $('#musicTip').style.opacity=0;
+    if(!ctx){const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return; ctx=new AC(); master=ctx.createGain(); master.gain.value=.5; master.connect(ctx.destination);}
+    if(!playing){ctx.resume();tick();timer=setInterval(tick,520);playing=true;mb.classList.add('on');mb.textContent='🔊'}
+    else{clearInterval(timer);playing=false;mb.classList.remove('on');mb.textContent='🎵'}
+  });
+  setTimeout(()=>{$('#musicTip').style.opacity=0},9000);
+})();
+</script>
+</body>
+</html>
